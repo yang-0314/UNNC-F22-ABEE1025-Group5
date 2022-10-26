@@ -39,7 +39,7 @@ def run_one_parametric_simulation(eplus_run_path, idf_path, output_dir,
     the_dict_of_path = {}
     for i in range(len(parameter_vals)):
         this_output_dir = output_dir + '/run_' + str(i+1)
-        this_file_path = this_output_dir + '/eplusout.scv'
+        this_file_path = this_output_dir + '/eplusout.csv'
         parameter_val = parameter_vals[i]
         run_one_simulation_helper(eplus_run_path, idf_path, 
                 this_output_dir, parameter_key, parameter_val)
