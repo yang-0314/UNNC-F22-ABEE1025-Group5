@@ -5,9 +5,11 @@ import tkinter as tk
 from Demo1 import read_and_calculate
 
 root=tk.Tk()
-
+# setting the windows' name 
+root.title("U_value calculter")
 # setting the windows size
 root.geometry("600x400")
+
 
 # declaring string variable
 # for storing name and password
@@ -27,6 +29,7 @@ def submit():
     ds=[float(d_var.get()), float(d_1_var.get()), float(d_2_var.get())]
     U_value = read_and_calculate(K_values, ds)
     print(U_value)
+    tk.Label(root, text = U_value).grid(row = 4, column = 2)
     '''
     K_value_var.set("")
     d_var.set("")
@@ -50,6 +53,8 @@ d_2_label = tk.Label(root, text = 'd_3', font = ('calibre',10,'bold'))
 d_entry=tk.Entry(root, textvariable = d_var, font = ('calibre',10,'normal'))
 d_1_entry=tk.Entry(root, textvariable = d_1_var, font = ('calibre',10,'normal'))
 d_2_entry=tk.Entry(root, textvariable = d_2_var, font = ('calibre',10,'normal'))
+# creating the result Label
+result_Label = tk.Label(root, text = 'result', font=('calibre',10, 'bold'))
 # creating a button using the widget
 # Button that will call the submit function
 sub_btn=tk.Button(root,text = 'Submit', command = submit)
@@ -69,8 +74,8 @@ d_2_label.grid(row=2,column=2)
 d_entry.grid(row=0,column=3)
 d_1_entry.grid(row=1,column=3)
 d_2_entry.grid(row=2,column=3)
-sub_btn.grid(row=4,column=4)
-
+sub_btn.grid(row=5,column=3)
+result_Label.grid(row=4,column=1)
 # performing an infinite loop
 # for the window to display
 root.mainloop()
