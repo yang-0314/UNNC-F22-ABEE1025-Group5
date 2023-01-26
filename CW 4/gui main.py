@@ -406,7 +406,7 @@ def run_5():
     d_5_entry.grid(row=5,column=3)
 
     sub_btn.grid(row=6,column=3)
-    result_Label.grid(row=5,column=1)
+    result_Label.grid(row=6,column=1)
 # performing an infinite loop
 # for the window to display
     root.mainloop()    
