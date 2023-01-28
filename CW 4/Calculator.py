@@ -16,8 +16,8 @@ def read_and_calculate(K_values, ds, n):
         dict_d[i] = ds[x]
         i = i + 1
         x = x + 1 
-    U_value_2(dict_K, dict_d)
-    return U_value_2(dict_K, dict_d)
+    U_value_2(dict_K, dict_d, n)
+    return U_value_2(dict_K, dict_d, n)
     
 def U_value_2(dict_K, dict_d, n):
     i = 0
