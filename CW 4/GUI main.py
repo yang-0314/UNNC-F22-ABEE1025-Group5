@@ -1,13 +1,40 @@
+import tkinter.messagebox
+from tkinter import *
+
+win=Tk()    # creating the main window and storing the window object in 'win'
+win.title('This is our own software!')    # setting title of the window
+win.geometry('600x200')     # setting the size of the window
+def start():     # def the function of the button
+    win.destroy()
+    tkinter.messagebox.showinfo("Greetings","\
+                                Welcome to U-value Calculator! \
+                                                                Authors: Liyang YU and Zesheng YANG")
+btn=Button(win,text="Click Me To Know More infomation", width=50, height=5, font=('Arial',10,'bold'), command=start, 
+            bg='yellow',activebackground='light yellow')
+btn.place(x=95, y=50)
+win.mainloop()      # running the loop that works as a trigger
+
 import tkinter as tk 
-from calculater import read_and_calculate
+# import the Tkinter library
+from Calculator import read_and_calculate
+# introduce 'readread_and_calculate' in the 'calculator' module
 win = tk.Tk()
 win.geometry("600x400")
-#def the funcation of different button 
+# setting the size of main window 
+lab = Label(win, text ='Please choose the number of layers of building material you want to analyze',
+                font=('Arial',12,'bold'), width = 80, height = 13, bg = 'light blue')
+lab.pack()
+
+	#####################################################################
+#### Below are the four buttons
+# def the function of different button 
 def run_3():
     win.destroy()
+    # as soon as button 3 is pressed
+    # window will be destroyed 
     root=tk.Tk()
 # setting the windows' name 
-    root.title("U_value calculter")
+    root.title("U_value Calculator")
 # setting the windows size
     root.geometry("600x400")
 
@@ -79,16 +106,25 @@ def run_3():
     d_2_entry.grid(row=2,column=3)
     sub_btn.grid(row=5,column=3)
     result_Label.grid(row=4,column=1)
+    
+    def close_1():      # to quit the whole window
+        root.destroy()
+    Button = tk.Button(root, text = 'Quit', width=10, height=5, command = close_1)
+    Button.place(x=400,y=20)
+    root.mainloop()
+    
 # performing an infinite loop
 # for the window to display
     root.mainloop()
     return
-########################################################################
+    
+	#####################################################################
+	
 def run_4():
     win.destroy()
     root=tk.Tk()
 # setting the windows' name 
-    root.title("U_value calculter")
+    root.title("U_value Calculator")
 # setting the windows size
     root.geometry("600x400")
 
@@ -176,18 +212,25 @@ def run_4():
 
     sub_btn.grid(row=5,column=3)
     result_Label.grid(row=4,column=1)
+    
+    def close_2():   # to quit the whole window
+        root.destroy()
+    Button = tk.Button(root, text = 'Quit', width=10, height=5, command = close_2)
+    Button.place(x=400,y=20)
+    root.mainloop()
+    
 # performing an infinite loop
 # for the window to display
     root.mainloop()    
     return
 
-########################################################################
+	#####################################################################
 
 def run_5():
     win.destroy()
     root=tk.Tk()
 # setting the windows' name 
-    root.title("U_value calculter")
+    root.title("U_value Calculator")
 # setting the windows size
     root.geometry("600x400")
 
@@ -287,16 +330,25 @@ def run_5():
 
     sub_btn.grid(row=5,column=3)
     result_Label.grid(row=6,column=1)
+    
+    def close_3():      # to quit the whole window
+        root.destroy()
+    Button = tk.Button(root, text = 'Quit', width=10, height=5, command = close_3)
+    Button.place(x=400,y=20)
+    root.mainloop()
+    
 # performing an infinite loop
 # for the window to display
     root.mainloop()    
     return
-#######################################################
+    
+	#######################################################
+	
 def run_5():
     win.destroy()
     root=tk.Tk()
 # setting the windows' name 
-    root.title("U_value calculter")
+    root.title("U_value Calculator")
 # setting the windows size
     root.geometry("600x400")
 
@@ -407,18 +459,25 @@ def run_5():
 
     sub_btn.grid(row=6,column=3)
     result_Label.grid(row=6,column=1)
+    
+    def close_4():      # to quit the whole window
+        root.destroy()
+    Button = tk.Button(root, text = 'Quit', width=10, height=5, command = close_4)
+    Button.place(x=400,y=20)
+    root.mainloop()
+    
 # performing an infinite loop
 # for the window to display
     root.mainloop()    
     return
 ########################################################################
 
-choose_but_1 = tk.Button(win, text = '3', command = run_3)
-choose_but_2 = tk.Button(win, text = '4', command = run_3)
-choose_but_3 = tk.Button(win, text = '5', command = run_4)
-choose_but_4 = tk.Button(win, text = '6', command = run_5)
-choose_but_1.place(relx = 0, rely =0.5)
-choose_but_2.place(relx = 0.25, rely = 0.5)
-choose_but_3.place(relx = 0.5, rely = 0.5)
-choose_but_4.place(relx = 0.75, rely = 0.5)
+choose_but_1 = tk.Button(win, text = '3', width=10, height=5, command = run_3)
+choose_but_2 = tk.Button(win, text = '4', width=10, height=5, command = run_3)
+choose_but_3 = tk.Button(win, text = '5', width=10, height=5, command = run_4)
+choose_but_4 = tk.Button(win, text = '6', width=10, height=5, command = run_5)
+choose_but_1.place(relx = 0.1, rely = 0.7)
+choose_but_2.place(relx = 0.3, rely = 0.7)
+choose_but_3.place(relx = 0.5, rely = 0.7)
+choose_but_4.place(relx = 0.7, rely = 0.7)
 win.mainloop()
