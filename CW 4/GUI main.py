@@ -1,7 +1,7 @@
 import tkinter as tk 
 # import the Tkinter library
 from Calculator import read_and_calculate
-# introduce 'readread_and_calculate' in the 'calculator' module
+# introduce 'readread_and_calculate' in the 'Calculator' module
 import tkinter.messagebox
 
 win1=tk.Tk()    # creating the main window and storing the window object in 'win'
