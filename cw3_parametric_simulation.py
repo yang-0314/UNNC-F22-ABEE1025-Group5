@@ -9,7 +9,7 @@ from StaticEplusEngine import run_eplus_model, convert_json_idf
 def run_one_simulation_helper(eplus_run_path, idf_path, this_output_dir,
 	                            parameter_key_1, parameter_val_1,
                                 parameter_key_2, parameter_val_2):
-    #####step 1 convert idf to josn
+    #####step 1 convert idf to json
     convert_json_idf(eplus_run_path,idf_path)
     epjson_path = idf_path.split('.idf')[0] + '.epJSON'
     #####step 2 load josn file into a JSON dict
