@@ -1,6 +1,6 @@
 ######last edit in 2022/11/22
 from matplotlib import pyplot as plt 
-from parametric_simulation import run_one_parametric_simulation
+from cw3_parametric_simulation import run_one_parametric_simulation
 from post_processor import plot_1D_results
 ##########This step is for confirm the range of parameter_vals
 test_range_1 = list(range(25,75,2))
@@ -29,7 +29,7 @@ the_dict_of_path = run_one_parametric_simulation(eplus_run_path, idf_path, outpu
                                 parameter_key_1, parameter_vals_1,
                                 parameter_key_2, parameter_vals_2)
 
-'''
+
 plot_cloumn_name = 'ZONE ONE:Zone Mean Air Temperature [C](TimeStep) '
 y_axis_title = 'Indoor Air Temperature [C](TimeStep)'
 plot_title = 'Simulation of Indoor Air Temperature vs. SHCG'
@@ -38,4 +38,4 @@ plot_1D_results( plot_cloumn_name, y_axis_title,
 
 ##########save the figure
 plt.savefig('plot_1D_results')
-'''
+
